@@ -1,8 +1,5 @@
 {
     "base": [
-        "less/lib/bootstrap.less",
-        "less/base/base.less",
-        "less/base/header.less",
-        "less/base/sidebar.less"
+        "less/main.less"
     ]
 }
