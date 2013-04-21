@@ -1,0 +1,16 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/tamasfodor\/Sites\/white_label_less_structure\/css\/base\/header\.css}line{font-family:\000033}}
+#Header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid red;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/tamasfodor\/Sites\/white_label_less_structure\/css\/base\/header\.css}line{font-family:\0000311}}
+#Header header {
+  padding: 10px;
+  font-size: 15px;
+  color: #ff0000;
+  font-weight: normal;
+  background-color: #ffa500;
+}

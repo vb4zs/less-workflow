@@ -1,0 +1,16 @@
+{
+  "name": "white_label_less_structure",
+  "version": "0.0.0",
+  "description": "Ideas of organizing less files according to white label principle.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "Tamas Fodor",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "assemble-less": "~0.4.2"
+  }
+}
