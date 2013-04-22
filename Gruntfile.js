@@ -2,20 +2,8 @@
 module.exports = function (grunt) {
     'use strict';
 
-    var styleSheets;
-
     grunt.initConfig({
         lessFiles: grunt.file.readJSON('config/stylesheets.json'),
-
-        readStylesheetJson: {
-            options: {
-                path: 'config/stylesheets.json'
-            },
-            files: {
-                src: 'jee'
-            },
-            ize: 'hoze'
-        },
 
         less: {
             options: {
@@ -35,27 +23,18 @@ module.exports = function (grunt) {
             },
             prod: {
                 options: {
-
-                }
+                    concat: true,
+                    yuicompress: true
+                },
+                files: [
+                    {
+                        src: '<%= lessFiles.base %>',
+                        dest: 'release/css/prod.min.css'
+                    }
+                ]
             }
         }
     });
 
-    grunt.registerTask('readStylesheetJson', function () {
-        var path = this.options().path,
-            stylesheets = grunt.file.readJSON(path),
-            i, il,
-            assemble = require('less');
-
-        grunt.log.writeln(assemble);
-
-        for (i = 0, il = stylesheets.base.length; i < il; i++) {
-            grunt.log.writeln(stylesheets.base[i]);
-        }
-    });
-
     grunt.loadNpmTasks('assemble-less');
-
-
-    grunt.registerTask('prod', ['readStylesheetJson']);
 };
