@@ -1,5 +1,6 @@
 {
     "base": [
-        "less/main.less"
+        "less/main.less",
+        "less/header.less"
     ]
 }

@@ -3,15 +3,15 @@ module.exports = function (grunt) {
     'use strict';
 
     grunt.initConfig({
-        lessFiles: grunt.file.readJSON('config/stylesheets.json'),
 
         less: {
-            options: {
-                paths: ['less/base']
-            },
             dev: {
                 options: {
-                    dumpLineNumbers: 'mediaquery'
+                    dumpLineNumbers: 'mediaquery',
+                    compress: false,
+                    yuicompress: false,
+                    optimization: null,
+                    strictImports: false
                 },
                 files: [{
                     expand: true,
@@ -20,18 +20,6 @@ module.exports = function (grunt) {
                     dest: 'css/',
                     ext: '.css'
                 }]
-            },
-            prod: {
-                options: {
-                    concat: true,
-                    yuicompress: true
-                },
-                files: [
-                    {
-                        src: '<%= lessFiles.base %>',
-                        dest: 'release/css/prod.min.css'
-                    }
-                ]
             }
         }
     });
